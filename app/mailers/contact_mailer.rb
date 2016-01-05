@@ -2,7 +2,7 @@
 class ContactMailer < ApplicationMailer
     def thankyou_email(message)
         @message = message
-        if(mail(to: message[:email], subject: '#{@message[:user]} - Your message has been sent'))
+        if(mail(to: message[:email], subject: "#{@message[:name]} - Your message has been sent"))
             return true
         else
             return false
@@ -11,7 +11,7 @@ class ContactMailer < ApplicationMailer
 
     def forward_email(message)
         @message = message
-        if(mail(to: 'deadolus@gmail.com', subject: 'New Email from contact form'))
+        if(mail(to: 'deadolus@gmail.com', subject: "New Email from contact form, user is #{@message[:name]}"))
             return true
         else
             return false
