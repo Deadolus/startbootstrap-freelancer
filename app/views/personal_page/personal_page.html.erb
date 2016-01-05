@@ -168,21 +168,21 @@
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
                         <label>Email Address</label>
-                        <%= email_field :message, :email, class:"form-control", placeholder:"Email Address", 'required data-validation-required-message':"Please enter your email address." %>
+                        <%= email_field :message, :email, class:"form-control", placeholder:"Email Address", 'required data-validation-required-message'=>"Please enter your email address." %>
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
                         <label>Phone Number</label>
-                        <%= telephone_field :message, :phone, class:"form-control", placeholder:"Phone Number", id:"phone", 'data-validation-required-message':"Please enter your phone number." %>
+                        <%= telephone_field :message, :phone, class:"form-control", placeholder:"Phone Number", id:"phone", 'data-validation-required-message'=>"Please enter your phone number." %>
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
                         <label>Message</label>
-                        <%= text_area :message, :content, rows:"5", class:"form-control", placeholder:"Message", required: true, 'data-validation-required-message':"Please enter a message." %>
+                        <%= text_area :message, :content, rows:"5", class:"form-control", placeholder:"Message", required: true, 'data-validation-required-message'=>"Please enter a message." %>
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
