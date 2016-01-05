@@ -1,4 +1,4 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Freelancer](http://startbootstrap.com/template-overviews/freelancer/)
+# [Ruby on Rails](http://rubyonrails.org/) port of [Start Bootstrap](http://startbootstrap.com/) - [Freelancer](http://startbootstrap.com/template-overviews/freelancer/)
 
 This is a port of the [Freelancer](http://startbootstrap.com/template-overviews/freelancer/)-theme to a heroku ruby on rails app.
 I changed everything that is necessary (adding ActionMailer instead of PHP script, changing css, moving to gems, etc...) - it looks and feels very close to the original now. 
