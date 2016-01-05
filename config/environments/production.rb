@@ -73,4 +73,15 @@ Rails.application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+    #Add my Mailer
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :user_name => ENV['SPARKPOST_SMTP_USERNAME'],
+      :password => ENV['SPARKPOST_SMTP_PASSWORD'],
+      :address => ENV['SPARKPOST_SMTP_HOST'],
+      :port => ENV['SPARKPOST_SMTP_PORT'],
+      enable_starttls_auto: true, 
+      format: :html,
+  }
 end
