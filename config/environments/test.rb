@@ -41,11 +41,11 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-        :user_name => '54444f922b6b142bf',
-          :password => '691af1f9d580ae',
-            :address => 'mailtrap.io',
-              :domain => 'mailtrap.io',
-                :port => '2525',
+        :user_name => ENV['MAILTRAP_USER_NAME'],
+          :password => ENV['MAILTRAP_PASSWORD'],
+            :address => ENV['MAILTRAP_ADDRESS'],
+              :domain => ENV['MAILTRAP_DOMAIN'],
+                :port => ENV['MAILTRAP_PORT'],
                   :authentication => :cram_md5
   }
 end
