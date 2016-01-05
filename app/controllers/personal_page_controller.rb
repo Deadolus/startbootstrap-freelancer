@@ -5,7 +5,7 @@ class PersonalPageController < ApplicationController
     def send_contact_email
         @message = params[:message]
         if(@message) 
-            if(ContactMailer.sendEmails(@message))
+            if(ContactMailer.forward_email(@message).deliver_now&&ContactMailer.forward_email(@message))
                 redirect_to root_path, notice: "Your message has been sent to Simon - thank you #{@message[:name]}!"
             else
                 redirect_to root_path, alert: "There was a problem with the mailer, could not send your e-mail"

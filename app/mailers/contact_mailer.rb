@@ -1,16 +1,17 @@
 
 class ContactMailer < ApplicationMailer
-    def thankyou_email(user)
-        @user = user
+    def thankyou_email(message)
+        @user = message[:name]
         @url = "http://www.swiry.ch/"
-        if(mail(to: @user.email, subject: 'Your message has been sent'))
+        if(mail(to: message[:email], subject: '#{@user} - Your message has been sent'))
             return true
         else
             return false
         end
     end
 
-    def forwardEmail(message)
+    def forward_email(message)
+        @message = message
         if(mail(to: 'deadolus@gmail.com', subject: 'New Email from contact form'))
             return true
         else
@@ -19,10 +20,17 @@ class ContactMailer < ApplicationMailer
     end
 
     def sendEmails(message)
-        if(self.forwardEmail(message) && self.thankyou_email(message[:email]) ) 
+        logger.debug "in sendEmails"
+        if(self.forward_email(message) && self.thankyou_email(message) ) 
             return true
+            logger.debug "Sent both e-mails sucessfully"
         else
+            logger.debug "Could not send the e-mails"
             return false
         end
     end
+    def test
+        logger.warn "this is a test"
+    end
+
 end
