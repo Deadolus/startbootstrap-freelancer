@@ -1,0 +1,30 @@
+Started GET "/" for ::1 at 2016-01-05 09:29:00 +0100
+Processing by PersonalPageController#personal_page as HTML
+  Rendered personal_page/personal_page.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 18ms (Views: 11.5ms)
+Started POST "/send_contact_email/" for ::1 at 2016-01-05 09:29:06 +0100
+Processing by PersonalPageController#send_contact_email as HTML
+  Parameters: {"utf8"=>"✓", "message"=>{"name"=>"DevEgli", "email"=>"deadolus@gmail.com", "phone"=>"+41793924504", "content"=>"test"}}
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+Started GET "/" for ::1 at 2016-01-05 09:29:06 +0100
+Processing by PersonalPageController#personal_page as HTML
+  Rendered personal_page/personal_page.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2ms (Views: 1.7ms)
+Started GET "/" for ::1 at 2016-01-05 09:33:55 +0100
+Processing by PersonalPageController#personal_page as HTML
+  Rendered personal_page/personal_page.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 5ms (Views: 4.6ms)
+Started GET "/" for ::1 at 2016-01-05 09:56:03 +0100
+Processing by PersonalPageController#personal_page as HTML
+  Rendered personal_page/personal_page.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 18ms (Views: 11.4ms)
+Started POST "/send_contact_email/" for ::1 at 2016-01-05 09:56:09 +0100
+Processing by PersonalPageController#send_contact_email as HTML
+  Parameters: {"utf8"=>"✓", "message"=>{"name"=>"DevEgli", "email"=>"deadolus@gmail.com", "phone"=>"+41793924504", "content"=>"test"}}
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms
+Started GET "/" for ::1 at 2016-01-05 09:56:09 +0100
+Processing by PersonalPageController#personal_page as HTML
+  Rendered personal_page/personal_page.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 3ms (Views: 2.6ms)
