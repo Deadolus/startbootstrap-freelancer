@@ -1,9 +1,8 @@
 
 class ContactMailer < ApplicationMailer
     def thankyou_email(message)
-        @user = message[:name]
-        @url = "http://www.swiry.ch/"
-        if(mail(to: message[:email], subject: '#{@user} - Your message has been sent'))
+        @message = message
+        if(mail(to: message[:email], subject: '#{@message[:user]} - Your message has been sent'))
             return true
         else
             return false
